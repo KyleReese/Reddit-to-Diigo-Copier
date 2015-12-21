@@ -29,7 +29,7 @@ class RedditSaves:
 
     def get_saved(self):
         reddit_saved_links = []
-        reddit_saves = self.red.user.get_saved(self.limit)
+        reddit_saves = self.red.user.get_saved(limit=self.limit)
         for reddit_save in reddit_saves:
             reddit_saved_links.append(reddit_save)
             if self.unsave:
